@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.EditCourse"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="View Course">
+    <ContentPage.Resources>
+        <Style x:Key="InvalidEntryStyle"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="Red" />
+        </Style>
+        <Style x:Key="ValidEntryStyle"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="Green" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="View Course"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <Label Text=" Course Name" />
+            <Entry x:Name="CourseNameF"
+                   Placeholder="{Binding courseName}" />
+
+            <Label Text="Start Date" />
+            <DatePicker x:Name="startDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="{Binding startDate}" />
+            <Button Text="Set Start Notification"
+                    Clicked="setStartNotification" />
+
+            <Label Text="End Date" />
+            <DatePicker x:Name="endDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="{Binding endDate}" />
+            <Button Text="Set End Notification"
+                    Clicked="setEndNotification" />
+            <Label Text=" Course Status" />
+
+            <Picker x:Name="CourseStatusF"
+                    Title="Course Status"
+                    SelectedIndex="{Binding courseStatus}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>In Progress</x:String>
+                        <x:String>Completed</x:String>
+                        <x:String>Dropped</x:String>
+                        <x:String>Plan to Take</x:String>
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text=" Course Instructor Name" />
+            <Entry x:Name="CourseInstructorNameF"
+                   Placeholder="{Binding courseInstructorName}">
+                <Entry.Behaviors>
+                    <toolkit:TextValidationBehavior x:Name="instructorNameValidation"
+                                                    InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                    ValidStyle="{StaticResource ValidEntryStyle}"
+                                                    Flags="ValidateOnValueChanged"
+                                                    MinimumLength="1" />
+                </Entry.Behaviors>
+
+            </Entry>
+            <Label Text=" Course Instructor Phone" />
+
+            <Entry x:Name="CourseInstructorPhoneF"
+                   Placeholder="{Binding courseInstructorPhone}">
+                <Entry.Behaviors>
+                    <toolkit:NumericValidationBehavior x:Name="phoneValidation"
+                                                       InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                       ValidStyle="{StaticResource ValidEntryStyle}"
+                                                       Flags="ValidateOnValueChanged" />
+                </Entry.Behaviors>
+
+            </Entry>
+            <Label Text=" Course Instructor Email" />
+            <Entry x:Name="CourseInstructorEmailF"
+                   Placeholder="{Binding courseInstructorEmail}">
+                <Entry.Behaviors>
+                    <toolkit:EmailValidationBehavior x:Name="emailValidation"
+                                                     InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                     ValidStyle="{StaticResource ValidEntryStyle}"
+                                                     Flags="ValidateOnValueChanged" />
+                </Entry.Behaviors>
+
+
+            </Entry>
+            <Label Text="Notes" />
+            <Entry x:Name="NotesF"
+                   Placeholder="{Binding notes}"
+                   />
+            <Button Text="Share Notes"
+                    Clicked="shareNotes"
+                    BindingContext="{Binding notes}" />
+            <Label Text="Due Date" />
+            <DatePicker x:Name="DueDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="{Binding dueDate}" />
+            <Button Text="Edit Course"
+                    Clicked="editCourseClick"
+                    Margin="10" />
+
+            <Button Text="Delete Course"
+                    Clicked="deleteCourse"
+                    Margin="10" />
+
+            <Button Text="Assessments"
+                    Clicked="addAssessment"
+                    BindingContext="{Binding Id}"
+                    Margin="10" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

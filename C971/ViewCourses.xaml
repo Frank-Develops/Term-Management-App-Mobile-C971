@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.ViewCourses"
+             Title="Courses">
+    <VerticalStackLayout Padding="25,50,50,25">
+        <Label Text="Courses"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="50"
+              ColumnSpacing="50">
+            <Label Grid.Column="0"
+                   Text="Course Name"
+                   FontSize="15" />
+            <Label Grid.Column="1"
+                   Text="View/Edit Course"
+                   FontSize="15" />
+
+        </Grid>
+        <CollectionView x:Name="courseList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*"
+                          RowDefinitions="50">
+                        <Label Grid.Column="0"
+                               Text="{Binding courseName}"
+                               FontSize="15" />
+                        <Button Grid.Column="1"
+                                Text="View/Edit Course"
+                                Clicked="editCourse"
+                                BindingContext="{Binding Id}"
+                                HorizontalOptions="Center"
+                                Margin="5" />
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add Course"
+                Clicked="addCourseForm"
+                Margin="20" />
+
+
+    </VerticalStackLayout>
+</ContentPage>

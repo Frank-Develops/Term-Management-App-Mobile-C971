@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows10.0.19041.0
+build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = C971
+build_property.ProjectDir = C:\c971\C971\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/c971/C971/AddAssessment.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.AddAssessment.xaml
+build_metadata.AdditionalFiles.TargetPath = AddAssessment.xaml
+build_metadata.AdditionalFiles.RelativePath = AddAssessment.xaml
+
+[C:/c971/C971/AddCourse.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.AddCourse.xaml
+build_metadata.AdditionalFiles.TargetPath = AddCourse.xaml
+build_metadata.AdditionalFiles.RelativePath = AddCourse.xaml
+
+[C:/c971/C971/AddTerm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.AddTerm.xaml
+build_metadata.AdditionalFiles.TargetPath = AddTerm.xaml
+build_metadata.AdditionalFiles.RelativePath = AddTerm.xaml
+
+[C:/c971/C971/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/c971/C971/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/c971/C971/EditAssessment.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.EditAssessment.xaml
+build_metadata.AdditionalFiles.TargetPath = EditAssessment.xaml
+build_metadata.AdditionalFiles.RelativePath = EditAssessment.xaml
+
+[C:/c971/C971/EditCourse.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.EditCourse.xaml
+build_metadata.AdditionalFiles.TargetPath = EditCourse.xaml
+build_metadata.AdditionalFiles.RelativePath = EditCourse.xaml
+
+[C:/c971/C971/EditTerm.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.EditTerm.xaml
+build_metadata.AdditionalFiles.TargetPath = EditTerm.xaml
+build_metadata.AdditionalFiles.RelativePath = EditTerm.xaml
+
+[C:/c971/C971/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/c971/C971/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/c971/C971/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/c971/C971/TermDetail.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.TermDetail.xaml
+build_metadata.AdditionalFiles.TargetPath = TermDetail.xaml
+build_metadata.AdditionalFiles.RelativePath = TermDetail.xaml
+
+[C:/c971/C971/ViewAssessments.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.ViewAssessments.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewAssessments.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewAssessments.xaml
+
+[C:/c971/C971/ViewCourses.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = C971.ViewCourses.xaml
+build_metadata.AdditionalFiles.TargetPath = ViewCourses.xaml
+build_metadata.AdditionalFiles.RelativePath = ViewCourses.xaml

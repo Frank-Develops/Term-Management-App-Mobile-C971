@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.ViewAssessments"
+             Title="View Assessments">
+    <VerticalStackLayout Padding="25,50,50,25">
+        <Label Text="Assessments"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*,*"
+              RowDefinitions="50"
+              ColumnSpacing="50">
+            <Label Grid.Column="0"
+                   Text="Assessment Name"
+                   FontSize="15" />
+            <Label Grid.Column="1"
+                   Text="View/Edit Assessment"
+                   FontSize="15" />
+
+        </Grid>
+        <CollectionView x:Name="assessmentsList">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,*"
+                          RowDefinitions="50">
+                        <Label Grid.Column="0"
+                               Text="{Binding assessmentName}"
+                               FontSize="15" />
+                        <Button Grid.Column="1"
+                                Text="View Assessment"
+                                Clicked="viewAssessment"
+                                BindingContext="{Binding Id}"
+                                HorizontalOptions="Center"
+                                Margin="1" />
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Text="Add Assessment"
+                Clicked="addAssessment"
+                Margin="20" />
+    </VerticalStackLayout>
+</ContentPage>

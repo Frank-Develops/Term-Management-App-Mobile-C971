@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.EditTerm"
+             Title="EditTerm"
+             >
+    <VerticalStackLayout >
+        <Label 
+            Text="Edit Term"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label 
+           Text="Term Name" />
+        <Entry x:Name="termNameF"         
+               Placeholder="{Binding termName}"
+               />
+        <Label 
+            Text="Start Date" />
+        <DatePicker x:Name="startDatePicker" 
+            MinimumDate="01/01/2024"
+            MaximumDate="12/31/2030"
+            Date="{Binding startDate}" />
+        <Label 
+            Text="End Date" />
+        <DatePicker x:Name="endDatePicker" 
+            MinimumDate="01/01/2024"
+            MaximumDate="12/31/2030"
+            Date="{Binding endDate}" />
+        <Button Text="Edit Term" 
+            Clicked="editTermClick" 
+                Margin="20"/>
+        <Button Text="Delete Term" 
+            Clicked="deleteTerm"
+                Margin="20"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.AddCourse"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Add Course">
+    <ContentPage.Resources>
+        <Style x:Key="InvalidEntryStyle"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="Red" />
+        </Style>
+        <Style x:Key="ValidEntryStyle"
+               TargetType="Entry">
+            <Setter Property="TextColor"
+                    Value="Green" />
+        </Style>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Add Course"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <Label Text=" Course Name" />
+            <Entry x:Name="CourseNameF"
+                   Placeholder="Course Name" />
+
+            <Label Text="Start Date" />
+            <DatePicker x:Name="startDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="07/01/2024" />
+            <Label Text="End Date" />
+            <DatePicker x:Name="endDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="07/01/2024" />
+            <Label Text=" Course Status" />
+            <Picker x:Name="CourseStatusF"
+                    Title="Course Status">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>In Progress</x:String>
+                        <x:String>Completed</x:String>
+                        <x:String>Dropped</x:String>
+                        <x:String>Plan to Take</x:String>
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text=" Course Instructor Name" />
+            <Entry x:Name="CourseInstructorNameF"
+                   Placeholder="Course Instructor Name">
+                <Entry.Behaviors>
+                    <toolkit:TextValidationBehavior x:Name="instructorNameValidation"
+                                                    InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                    ValidStyle="{StaticResource ValidEntryStyle}"
+                                                    Flags="ValidateOnValueChanged"
+                                                    MinimumLength="1" />
+                </Entry.Behaviors>
+
+            </Entry>
+            <Entry x:Name="CourseInstructorPhoneF"
+                   Placeholder="Course Instructor Phone">
+                <Entry.Behaviors>
+                    <toolkit:NumericValidationBehavior x:Name="phoneValidation"
+                                                       InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                       ValidStyle="{StaticResource ValidEntryStyle}"
+                                                       Flags="ValidateOnValueChanged" />
+                </Entry.Behaviors>
+
+            </Entry>
+            <Entry x:Name="CourseInstructorEmailF"
+                   Placeholder="Course Instructor Email">
+                <Entry.Behaviors>
+                    <toolkit:EmailValidationBehavior x:Name="emailValidation"
+                                                     InvalidStyle="{StaticResource InvalidEntryStyle}"
+                                                     ValidStyle="{StaticResource ValidEntryStyle}"
+                                                     Flags="ValidateOnValueChanged" />
+                </Entry.Behaviors>
+
+            </Entry>
+
+            <Entry x:Name="NotesF"
+                   Placeholder="Notes Demo" />
+            <Label Text="Due Date" />
+            <DatePicker x:Name="DueDatePicker"
+                        MinimumDate="01/01/2024"
+                        MaximumDate="12/31/2030"
+                        Date="07/01/2024" />
+            <Button Text="Add Course"
+                    Margin="20"
+                    Clicked="addCourse" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

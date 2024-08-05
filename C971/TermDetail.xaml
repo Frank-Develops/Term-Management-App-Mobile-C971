@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971.TermDetail"
+             Title="Term Detail">
+    <VerticalStackLayout Padding="25,50,50,25">
+        <Label 
+            Text="Term Detail"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label Text="Term Name" />
+        <Label Text="{Binding termName}" FontSize="15"/>
+        <Label Text="Start Date" />
+        <Label Text="{Binding startDate, StringFormat='{0:d}'}" />
+        <Label Text="End Date" />
+        <Label Text="{Binding endDate, StringFormat='{0:d}'}"/>
+        <Button Text="View Courses" 
+                Clicked="viewCourses"
+                 BindingContext="{Binding Id}" 
+                Margin="20"/>
+
+    </VerticalStackLayout>
+</ContentPage>
